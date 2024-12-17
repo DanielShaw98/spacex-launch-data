@@ -21,3 +21,9 @@ export interface Column {
   minWidth?: number;
   align?: 'left' | 'center';
 }
+
+export interface LaunchDialogProps {
+  open: boolean;
+  onClose: () => void;
+  selectedLaunch: LaunchData | null;
+}
