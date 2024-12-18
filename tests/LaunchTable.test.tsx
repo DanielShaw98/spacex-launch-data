@@ -55,3 +55,5 @@ describe('LaunchTable', () => {
 });
 
 // Add handle pagination and page change tests
+// Add handle error state when fetch fails
+// Add handle closing the dialog

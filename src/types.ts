@@ -2,7 +2,6 @@ export interface LaunchData {
   id: string;
   name: string;
   date_utc: string;
-  rocket: string;
   details: string | null;
   launchpad: string;
   success: boolean | null;
