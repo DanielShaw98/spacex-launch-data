@@ -11,7 +11,7 @@ const LaunchDialog: React.FC<LaunchDialogProps> = ({ open, onClose, selectedLaun
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>
-        <Typography variant="h6">Launch Details</Typography>
+        <div>Launch Details</div>
         <IconButton
           edge="end"
           color="inherit"
@@ -30,14 +30,14 @@ const LaunchDialog: React.FC<LaunchDialogProps> = ({ open, onClose, selectedLaun
       <DialogContent>
         {selectedLaunch && (
           <div>
-            <Typography variant="h6">Name: {selectedLaunch.name}</Typography>
-            <Typography variant="body1">
+            <Typography variant="subtitle1">Name: {selectedLaunch.name}</Typography>
+            <Typography variant="subtitle1">
               Launch Date: {new Date(selectedLaunch.date_utc).toLocaleDateString()}
             </Typography>
-            <Typography variant="body1">Rocket ID: {selectedLaunch.id}</Typography>
-            <Typography variant="body1">Launchpad ID: {selectedLaunch.launchpad}</Typography>
-            <Typography variant="body1">Status: {selectedLaunch.success ? "Success" : "Failed"}</Typography>
-            <Typography variant="body1">
+            <Typography variant="subtitle1">Rocket ID: {selectedLaunch.id}</Typography>
+            <Typography variant="subtitle1">Launchpad ID: {selectedLaunch.launchpad}</Typography>
+            <Typography variant="subtitle1">Status: {selectedLaunch.success ? "Success" : "Failed"}</Typography>
+            <Typography variant="subtitle1">
               Details: {selectedLaunch.details || 'No details available'}
             </Typography>
           </div>
