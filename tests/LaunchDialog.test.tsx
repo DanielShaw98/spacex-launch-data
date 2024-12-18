@@ -43,6 +43,5 @@ describe('LaunchDialog', () => {
   });
 });
 
-
 // Add handle when launch data is missing
 // Add handle to check loading state (currently not implemented)

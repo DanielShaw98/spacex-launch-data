@@ -5,9 +5,19 @@ import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import { LaunchDialogProps } from '../types';
+import { useNavigate } from 'react-router-dom';
 
 const LaunchDialog: React.FC<LaunchDialogProps> = ({ open, onClose, selectedLaunch }) => {
+  const navigate = useNavigate();
+
+  const handleGoToSummary = () => {
+    if (selectedLaunch) {
+      navigate(`/launch/${selectedLaunch.id}`);
+    }
+  };
+
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogTitle>
@@ -27,7 +37,14 @@ const LaunchDialog: React.FC<LaunchDialogProps> = ({ open, onClose, selectedLaun
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent>
+      <DialogContent
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          paddingBottom: '20px'
+        }}
+      >
         {selectedLaunch && (
           <div>
             <Typography variant="subtitle1">Name: {selectedLaunch.name}</Typography>
@@ -42,6 +59,17 @@ const LaunchDialog: React.FC<LaunchDialogProps> = ({ open, onClose, selectedLaun
             </Typography>
           </div>
         )}
+        <Button
+          onClick={handleGoToSummary}
+          sx={{
+            alignSelf: 'center',
+            padding: '10px 20px',
+            fontSize: '16px',
+            minWidth: '120px',
+          }}
+        >
+          Go to Summary
+        </Button>
       </DialogContent>
     </Dialog>
   );
