@@ -3,10 +3,6 @@ import { useNavigate } from "react-router-dom";
 import LaunchDialog from "../src/components/LaunchDialog";
 import { userEvent } from "@testing-library/user-event";
 
-jest.mock("../src/api/SpacexApi", () => ({
-  fetchLaunches: jest.fn(),
-}));
-
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useNavigate: jest.fn(),

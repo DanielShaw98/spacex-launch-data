@@ -46,10 +46,6 @@ export default function LaunchTable() {
     return <div>{error}</div>;
   }
 
-  if (launches === null) {
-    return <div>Loading...</div>;
-  }
-
   const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
   };
