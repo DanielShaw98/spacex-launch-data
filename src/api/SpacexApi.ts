@@ -1,7 +1,7 @@
-import axios from 'axios';
-import { LaunchData } from '../types';
+import axios from "axios";
+import { LaunchData } from "../types";
 
-const BASE_URL = 'https://api.spacexdata.com/v4';
+const BASE_URL = "https://api.spacexdata.com/v4";
 
 export const fetchLaunches = async (): Promise<LaunchData[]> => {
   try {

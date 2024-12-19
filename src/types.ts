@@ -23,10 +23,10 @@ interface LaunchLinks {
 }
 
 export interface Column {
-  id: 'id' | 'name' | 'date_utc' | 'details';
+  id: "id" | "name" | "date_utc" | "details";
   label: string;
   minWidth?: number;
-  align?: 'left' | 'center';
+  align?: "left" | "center";
 }
 
 export interface LaunchDialogProps {
