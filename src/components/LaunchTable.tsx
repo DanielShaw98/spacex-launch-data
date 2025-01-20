@@ -7,6 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
+import { Typography } from "@mui/material";
 import { fetchLaunches } from "../api/SpacexApi";
 import { Column } from "../types";
 import { LaunchTableData } from "../types";
@@ -43,7 +44,13 @@ export default function LaunchTable() {
   }, []);
 
   if (error) {
-    return <div>{error}</div>;
+    return (
+      <Paper sx={{ width: "100%", overflow: "hidden" }}>
+        <TableContainer sx={{ height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <Typography variant="h4">{error}</Typography>
+        </TableContainer>
+      </Paper>
+    );
   }
 
   const handleChangePage = (_: unknown, newPage: number) => {

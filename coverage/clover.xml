@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1734627506425" clover="3.2.0">
-  <project timestamp="1734627506425" name="All files">
+<coverage generated="1734699970682" clover="3.2.0">
+  <project timestamp="1734699970682" name="All files">
     <metrics statements="64" coveredstatements="59" conditionals="12" coveredconditionals="9" methods="15" coveredmethods="12" elements="91" coveredelements="80" complexity="0" loc="64" ncloc="64" packages="1" files="2" classes="2"/>
     <file name="LaunchDialog.tsx" path="/Users/danielshaw/code/DanielShaw98/Code Tests/spacex-launch-data/src/components/LaunchDialog.tsx">
       <metrics statements="16" coveredstatements="16" conditionals="7" coveredconditionals="5" methods="3" coveredmethods="3"/>

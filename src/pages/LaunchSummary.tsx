@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchLaunches } from "../api/SpacexApi";
 import { LaunchData } from "../types";
 import Typography from "@mui/material/Typography";
+import { TableContainer } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import "./LaunchSummary.css";
 
@@ -27,7 +28,13 @@ const LaunchSummary: React.FC = () => {
   }, [id]);
 
   if (!launch) {
-    return <div>Loading...</div>;
+    return (
+      <Paper sx={{ width: "100%", overflow: "hidden" }}>
+        <TableContainer sx={{ height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <Typography variant="h4">Loading...</Typography>
+        </TableContainer>
+      </Paper>
+    );
   }
 
   return (
